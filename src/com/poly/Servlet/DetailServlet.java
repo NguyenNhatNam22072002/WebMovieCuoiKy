@@ -331,7 +331,9 @@ public class DetailServlet extends HttpServlet {
 				+ "<br> <a href=\"http://localhost:8080/WebMovie/page/detail/" + id + "\">Link phim</a>"
 				+ "<br> <p>Link Trailer: </p>" + "https://www.youtube.com/watch?v=" + phim.getTrailer();
 		Properties props = new Properties();
+		props.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
 		props.setProperty("mail.smtp.host", "smtp.gmail.com");
+		props.setProperty("mail.smtp.ssl.trust", "*");
 		props.setProperty("mail.smtp.port", "587");
 		props.setProperty("mail.smtp.auth", "true");
 		props.setProperty("mail.smtp.starttls.enable", "true");
